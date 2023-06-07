@@ -14,12 +14,28 @@ int solveLeftToRight(string s, char x, int i, int ans){
      return solveLeftToRight(s,x,i+1,ans);
 }
 
+int solveRightToLeft(string s, char x, int i, int ans){
+    if(i<0){
+        return ans;
+    }
+    if(s[i]==x){
+        return i;
+    }
+    return solveRightToLeft(s,x,i-1,ans);
+}
+
 int main() {
     // Write C++ code here
     string str = "dasbbgdedh";
     char x = 'd';
     int ans = -1;
     int ans2 = solveLeftToRight(str,x,0,ans);
-    cout<<"Last index of "<<x<<" is : "<<ans2<<endl;
+    
+    int lastindex = str.length()-1;
+    int ans3 = solveRightToLeft(str,x,lastindex,ans);
+    
+    cout<<"Last index of "<<x<<" going from L to R is : "<<ans2<<endl;
+    cout<<endl;
+    cout<<"Last index of "<<x<<" going from R to L is : "<<ans3<<endl;
     return 0;
 }
