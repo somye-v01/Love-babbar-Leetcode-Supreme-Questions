@@ -1,4 +1,4 @@
-// Online C++ compiler to run C++ program online
+
 #include <iostream>
 #include<vector>
 using namespace std;
@@ -13,6 +13,7 @@ void printallsubarrays(vector<int>& v, int start, int end){
     cout<<endl;
     printallsubarrays(v,start,end+1);
 }
+
 void callforallstarts(vector<int>& v, int start, int end){
     for(int i = 0; i<v.size(); i++){
         end =i;
