@@ -1,7 +1,7 @@
 #include<iostream>
 #include<algorithm>
 using namespace std;
-
+//2nd way to solve the question
 void rev(string& s, int start, int end){
     if(start>end){
         return;
