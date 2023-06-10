@@ -13,7 +13,7 @@ void printallsubarrays(vector<int>& v, int start, int end){
     cout<<endl;
     printallsubarrays(v,start,end+1);
 }
-
+//tried doing it within one function only but failed, so adding another function.
 void callforallstarts(vector<int>& v, int start, int end){
     for(int i = 0; i<v.size(); i++){
         end =i;
