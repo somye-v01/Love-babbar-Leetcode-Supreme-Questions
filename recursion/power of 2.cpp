@@ -7,7 +7,7 @@ int power(int n){
         return 1;
     }
     
-    int ans = 2* power(n-1);
+    int ans = 2* power(n-1); 
     
     
 }

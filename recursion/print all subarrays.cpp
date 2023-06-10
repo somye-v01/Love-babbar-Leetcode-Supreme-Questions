@@ -22,7 +22,7 @@ void callforallstarts(vector<int>& v, int start, int end){
 }
 
 int main() {
-    // Write C++ code here
+    
     vector<int> v = {1,2,3,4,5};
     callforallstarts(v,0,0);
 
