@@ -9,10 +9,10 @@ public:
         //Base Case
         if(p1<0 and p2<0){
             if(carry!=0){
-                return string(1,carry+'0');
+                return ans2.push_back(carry+'0');
                 
             }
-            return "";
+            return ;
         }
         int n1;
         int n2;
@@ -33,17 +33,17 @@ public:
 
         int digit = csum%10;
          carry = csum/10;
-        string ans = "";
-        ans.push_back(digit+'0');
-        ans+=addRE(num1,p1-1,num2,p2-1,carry,ans2);
-        return ans;
+        
+        ans2.push_back(digit+'0');
+        addRE(num1,p1-1,num2,p2-1,carry,ans2);
+        // return ans;
 
     }
 
     string addStrings(string num1, string num2) {
         string ans2="";
-        string ans = addRE(num1,num1.length()-1,num2,num2.length()-1,0,ans2);
-        reverse(ans.begin(),ans.end());
-        return ans;
+        addRE(num1,num1.length()-1,num2,num2.length()-1,0,ans2);
+        reverse(ans2.begin(),ans2.end());
+        return ans2;
     }
 };
