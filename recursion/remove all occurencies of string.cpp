@@ -1,26 +1,21 @@
-
-class Solution {
 #include<iostream>
-#include <stdio.h>
+#include<string>
+using namespace std;
+class Solution {
 public:
-void removeOCCRE(string &s, string &part) {
-int found = s. find (part);
-if (found != string::npos) {
-//part string has been located.
-//Please remove it
-string left_part = s.substr(0, found);
-string right_part = s.substr( found+part.size () , s.size ()) ;
-s = left_part + right_part;
-removeOCCRE(s, part) ;
-}
-else{
-//base case
-//all the occurences of part has been removed from s.
-return;
-}
-}
-string removeOccurrences (string s, string part) {
-removeOCCRE (s, part) ;
-return s;
-}
+    string removeOccurrences(string s, string part) {
+        int ans = s.find(part);
+        //BaseCase
+        if(ans!=string::npos){
+        //ek case solve kr do
+        string left_str = s.substr(0,ans);
+        string right_str = s.substr(ans+part.length(),s.length());
+        s = left_str + right_str;
+        return removeOccurrences(s,part);
+        }
+        else{
+            return s;
+        }
+        
+    }
 };
