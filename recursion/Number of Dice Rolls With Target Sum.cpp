@@ -7,6 +7,7 @@ public:
         if(target<0 || n==0 && target!=0 || n!=0 and target == 0){
             return 0;
         }
+    
         if (n==0 && target == 0){
             return 1;
         }
@@ -25,4 +26,3 @@ public:
         return ans;
     }
 };
-//last question of recursion in course.
