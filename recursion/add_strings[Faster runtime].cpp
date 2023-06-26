@@ -5,7 +5,7 @@ using namespace std;
 class Solution {
 public:
 
-    void addRE(string& num1, int p1, string& num2, int p2, int carry ,string& ans2){
+void addRE(string& num1, int p1, string& num2, int p2, int carry ,string& ans2){
         //Base Case
         if(p1<0 and p2<0){
             if(carry!=0){
