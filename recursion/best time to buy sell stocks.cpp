@@ -8,7 +8,7 @@ public:
         if(i==prices.size()){
             return;
         }
-        if(prices[i]<min_price){
+        if(prices[i] < min_price){
             min_price=prices[i];
         }
         int profittoday = prices[i]-min_price;
