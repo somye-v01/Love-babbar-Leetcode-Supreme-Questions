@@ -19,7 +19,7 @@ public:
         maxProfitFind(prices,ni,min_price,max_profit);
     }
 
-    int maxProfit(vector<int>& prices) {
+    int maxProfit (vector<int>& prices) {
         int min_price = prices[0];
         int max_profit = 0;
         int s_index=0;
