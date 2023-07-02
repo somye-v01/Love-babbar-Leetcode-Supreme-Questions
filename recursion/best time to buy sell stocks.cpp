@@ -12,7 +12,7 @@ public:
             min_price=prices[i];
         }
         int profittoday = prices[i]-min_price;
-        if(profittoday > max_profit){
+        if(profittoday >   max_profit){
             max_profit=profittoday;
         }
         int ni = i+1;
