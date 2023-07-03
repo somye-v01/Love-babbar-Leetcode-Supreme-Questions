@@ -41,7 +41,7 @@ public:
     }
 
     string addStrings(string num1, string num2) {
-        string ans = addRE(num1,num1.length()-1,num2,num2.length()-1,0);
+        string ans = addRE (num1,num1.length()-1,num2,num2.length()-1,0);
         reverse(ans.begin(),ans.end());
         return ans;
     }
