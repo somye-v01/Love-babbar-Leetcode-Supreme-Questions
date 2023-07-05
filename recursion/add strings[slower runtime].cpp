@@ -31,10 +31,10 @@ public:
         }
         int csum = n1+n2+carry;
 
-        int digit = csum%10;
+        int digits = csum%10;
          carry = csum/10;
         string ans = "";
-        ans.push_back(digit+'0');
+        ans.push_back(digits+'0');
         ans+=addRE(num1,p1-1,num2,p2-1,carry);
         return ans;
 
